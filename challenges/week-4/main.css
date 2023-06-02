@@ -5,11 +5,9 @@
 }
 
 .plant-card{
-    background-color: yellow;
-    width: 100px;
-    height: 100px;
     transition: all 1s;
     margin: auto 1rem;
+    background-size: cover;
 }
 
 .plant-card-text{

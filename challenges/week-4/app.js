@@ -15,8 +15,21 @@ const makeCardData = (img, text) => {
   return { img: img, text: text };
 };
 
-// take object and turn it into an element
-const addCard = (cardObj) => {};
+// take object w/ data and turn it into an element
+const addCard = (cardObj) => {
+  let card = document.createElement("div");
+  card.className = "plant-card";
+
+  // TODO: fix below! what's an alternative to style, how am i making this have a specific background?
+  card.style.background = `url(${cardObj.img}), #FFFFFF`;
+
+  let cardText = document.createElement("span");
+  cardText.className = "plant-card-text";
+  cardText.innerText = cardObj.text;
+
+  box.appendChild(card);
+  card.appendChild(cardText);
+};
 
 // arr of obj of cards to assemble:
 const cardDataArr = [
@@ -31,4 +44,5 @@ const cardDataArr = [
   makeCardData("./plant-img/fd1392336005b641e3b1ad6a0b95b740.jpg", "Growth"),
 ];
 
-//
+// testing adding card to dom
+addCard(cardDataArr[0]);
