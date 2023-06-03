@@ -45,6 +45,6 @@ const cardDataArr = [
 ];
 
 // adding all the cards to the DOM
-for (let i = 0; i <= cardDataArr.length; i++) {
+for (let i = 0; i < cardDataArr.length; i++) {
   addCard(cardDataArr[i]);
 }
