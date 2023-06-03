@@ -20,15 +20,15 @@ const addCard = (cardObj) => {
   let card = document.createElement("div");
   card.className = "plant-card";
 
-  // TODO: fix below! what's an alternative to style, how am i making this have a specific background?
-  card.style.background = `url(${cardObj.img}), #FFFFFF`;
+  // it looks like adjusting style is the way to go, even if i don't like it
+  card.style.backgroundImage = `url(${cardObj.img})`;
 
   let cardText = document.createElement("span");
   cardText.className = "plant-card-text";
   cardText.innerText = cardObj.text;
 
-  box.appendChild(card);
   card.appendChild(cardText);
+  box.appendChild(card);
 };
 
 // arr of obj of cards to assemble:
@@ -44,5 +44,7 @@ const cardDataArr = [
   makeCardData("./plant-img/fd1392336005b641e3b1ad6a0b95b740.jpg", "Growth"),
 ];
 
-// testing adding card to dom
-addCard(cardDataArr[0]);
+// adding all the cards to the DOM
+for (let i = 0; i <= cardDataArr.length; i++) {
+  addCard(cardDataArr[i]);
+}
