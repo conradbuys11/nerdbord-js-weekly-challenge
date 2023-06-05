@@ -1,0 +1,64 @@
+body{
+    color: #33383D;
+}
+
+.responsive-box{
+    display: flex;
+    margin: 20% 1% 20% 10%;
+}
+
+.text-box{
+    flex-direction: column;
+}
+
+.photo-box{
+
+}
+
+.heading{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 55px;
+    letter-spacing: 0.02em;
+}
+
+.paragraph{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0.04em;
+}
+
+.image{
+
+}
+
+/* tablet */
+@media screen and (max-width: 1199px) {
+    .heading{
+
+    }
+    
+    .paragraph{
+    
+    }
+    
+    .image{
+    
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+    .heading{
+
+    }
+    
+    .paragraph{
+    
+    }
+    
+    .image{
+    
+    }
+}
