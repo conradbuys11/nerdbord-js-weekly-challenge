@@ -4,15 +4,21 @@ body{
 
 .responsive-box{
     display: flex;
-    margin: 20% 1% 20% 10%;
+    margin: 10% 1% 0 7.5%;
 }
 
 .text-box{
+    display: flex;
     flex-direction: column;
+    order: 1;
+    padding-right: 1rem;
+    width: 30%;
 }
 
 .photo-box{
-
+    display: flex;
+    order: 2;
+    width: 70%;
 }
 
 .heading{
@@ -30,7 +36,7 @@ body{
 }
 
 .image{
-
+    width: 300%;
 }
 
 /* tablet */
