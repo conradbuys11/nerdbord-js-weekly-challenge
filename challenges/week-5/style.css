@@ -10,15 +10,9 @@ body{
 .text-box{
     display: flex;
     flex-direction: column;
-    order: 1;
+    order: 0;
     padding-right: 1rem;
     width: 30%;
-}
-
-.photo-box{
-    display: flex;
-    order: 2;
-    width: 70%;
 }
 
 /* font desktop size: 3.3% of height */
@@ -26,6 +20,7 @@ body{
     font-size: 64px;
     line-height: 115%;
     letter-spacing: 0.02em;
+    margin-right: 1.5rem;
 }
 
 /* font desktop size: 1.1% of height */
@@ -34,6 +29,12 @@ body{
     line-height: 169%;
     letter-spacing: 0.04em;
     margin-right: 1.5rem
+}
+
+.photo-box{
+    display: flex;
+    order: 1;
+    width: 70%;
 }
 
 .image-and-overlay{
@@ -71,32 +72,64 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1vw;
     top: 42%;
     left: 40%;
 }
 
 .overlay-header{
     display: flex;
-    font-size: 33px;
+    font-size: 200%;
     line-height: 152%;
 }
 
 .overlay-text{
     display: flex;
-    font-size: 22px;
+    font-size: 131%;
     line-height: 169%;
 }
 
 /* tablet */
 @media screen and (max-width: 1199px) {
-    .image{
+    .responsive-box{
+        margin: 2% 1% 0 2%;
+    }
+
+    .text-box{
+        width: 40%;
+    }
+
+    .photo-box{
+        width: 55%;
+    }
+
+    /* lower % due to larger font inside the div */
+    .overlay-div{
+        left: 35%;
+    }
+
+    /* 1.5x desktop width */
+    .overlay-header{
+        font-size: 300%;
+    }
     
+    /* 1.5x desktop width */
+    .overlay-text{
+        font-size: 196.5%;
     }
 }
 
 /* mobile */
 @media screen and (max-width: 767px) {
-    .image{
-    
+    .responsive-box{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .photo-box{
+        order: 0;
+        width: 80%;
+        height: 58vw;
+        flex-grow: 2;
     }
 }
