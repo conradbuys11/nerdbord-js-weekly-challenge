@@ -124,12 +124,13 @@ body{
     .responsive-box{
         flex-direction: column;
         flex-wrap: nowrap;
+        margin: 2% 5%;
     }
 
     .photo-box{
         order: 0;
-        width: 80%;
-        height: 58vw;
+        width: 90%;
+        height: 57.8vh;
         flex-grow: 2;
     }
 }
