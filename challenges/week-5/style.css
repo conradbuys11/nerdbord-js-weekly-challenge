@@ -41,7 +41,6 @@ body{
 
 .image-and-overlay{
     position: relative;
-    transition-duration: 500ms;
     width: 100%;
     height: 100%;
     background-color: #000000;
@@ -49,34 +48,14 @@ body{
 
 .image{
     object-fit: cover;
-    transition-duration: inherit;
-    transition-property: opacity;
     width: 100%;
     height: 100%;
     opacity: 1;
 }
 
-.image-and-overlay:hover > .image{
-    opacity: 0.35;
-}
-
-.image-and-overlay:hover > .overlay-div{
-    opacity: 1;
-}
-
 
 .overlay-div{
-    transition-property: opacity;
-    transition-duration: 500ms;
-    color: #e8e6e2;
-    opacity: 0;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1vw;
-    top: 42%;
-    left: 40%;
+    display: none;
 }
 
 .overlay-header{
@@ -89,6 +68,40 @@ body{
     display: flex;
     font-size: 131%;
     line-height: 169%;
+}
+
+/* setting up overlay for tablet & desktop */
+@media screen and (min-width: 767px){
+    .image-and-overlay{
+        transition-duration: 500ms;
+    }
+
+    .image{
+        transition-duration: inherit;
+        transition-property: opacity;
+    }
+
+    .image-and-overlay:hover > .image{
+        opacity: 0.35;
+    }
+
+    .image-and-overlay:hover > .overlay-div{
+        opacity: 1;
+    }
+
+    .overlay-div{
+        transition-property: opacity;
+        transition-duration: 500ms;
+        color: #e8e6e2;
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1vw;
+        top: 42%;
+        left: 40%;
+    }
 }
 
 /* tablet */
@@ -126,14 +139,26 @@ body{
 @media screen and (max-width: 767px) {
     .responsive-box{
         flex-direction: column;
-        flex-wrap: nowrap;
-        margin: 2% 5%;
+        /* flex-wrap: nowrap; */
+        margin: 2% 4.5%;
     }
 
     .photo-box{
         order: 0;
-        width: 90%;
+        width: 100%;
         height: 57.8vh;
         flex-grow: 2;
+    }
+
+    .text-box{
+        width: 100%;
+    }
+
+    .paragraph{
+        margin: 0;
+    }
+
+    .paragraph{
+        font-size: 22px;
     }
 }
