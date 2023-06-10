@@ -1,11 +1,12 @@
 body{
     color: #33383D;
+    margin: 0;
 }
 
 .responsive-box{
     display: flex;
-    margin: 10% 1% 0 7%;
-    gap: 1rem;
+    margin: 8% 2% 0 7%;
+    gap: 2%;
 }
 
 .text-box{
@@ -26,7 +27,7 @@ body{
 
 /* font desktop size: 1.1% of height */
 .paragraph{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 169%;
     letter-spacing: 0.04em;
@@ -93,7 +94,8 @@ body{
 /* tablet */
 @media screen and (max-width: 1199px) {
     .responsive-box{
-        margin: 2% 1% 0 2%;
+        margin: 2% 2.5% 0 2.5%;
+        gap: 6%;
     }
 
     .text-box{
@@ -101,7 +103,7 @@ body{
     }
 
     .photo-box{
-        width: 55%;
+        width: 60%;
     }
 
     /* lower % due to larger font inside the div */
