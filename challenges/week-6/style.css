@@ -1,0 +1,84 @@
+body{
+    background-color: black;
+    margin: 0;
+    position: relative;
+}
+
+.icon{
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    left: auto;
+    width: 98px;
+    height: 49px;
+    cursor: pointer;
+}
+
+.line{
+    border: 3px solid #ffffff;
+    position: absolute;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 600ms;
+}
+
+.line-two{
+    top: 50%;
+    width: 50%;
+    left: 50%;
+}
+
+.menu-icon .line-one{
+    transform: rotate(-180deg);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+.menu-icon .line-two{
+    opacity: 1;
+}
+
+.menu-icon .line-three{
+    transform: rotate(180deg);
+    top: 100%;
+    width: 100%;
+    left: 0%;
+}
+
+.close-icon .line-one{
+    transform: rotate(-135deg);
+    top: 50%;
+    width: 80%;
+    left: 20%;
+}
+
+.close-icon .line-two{
+    opacity: 0;
+}
+
+.close-icon .line-three{
+    transform: rotate(135deg);
+    top: 50%;
+    width: 80%;
+    left: 20%;
+}
+
+.side-nav{
+    display: inline-block;
+    position: relative;
+    width: 710px;
+    height: 700px;
+    transition-property: left;
+    transition-timing-function: ease-in-out;
+    transition-duration: 600ms;
+}
+
+.closed{
+    left: -710px;
+}
+
+.open{
+    left: 0px;
+}
