@@ -23,24 +23,28 @@ body{
     transition-duration: 600ms;
 }
 
-.menu-icon .line-one{
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    transform: rotate(-180deg);
-}
-
-.menu-icon .line-two{
+.line-two{
     top: 50%;
     width: 50%;
     left: 50%;
 }
 
+.menu-icon .line-one{
+    transform: rotate(-180deg);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+.menu-icon .line-two{
+    opacity: 1;
+}
+
 .menu-icon .line-three{
+    transform: rotate(180deg);
     top: 100%;
     width: 100%;
     left: 0%;
-    transform: rotate(180deg);
 }
 
 .close-icon .line-one{
@@ -52,9 +56,6 @@ body{
 
 .close-icon .line-two{
     opacity: 0;
-    top: 50%;
-    width: 50%;
-    left: 50%;
 }
 
 .close-icon .line-three{

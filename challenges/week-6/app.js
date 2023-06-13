@@ -5,7 +5,6 @@ const iconTransition = (e) => {
   let icon = e.target;
   if (icon.classList.contains("line")) {
     icon = icon.parentNode;
-    console.log("clicked on line, but fixed");
   }
 
   if (icon.classList.contains("menu-icon")) {
