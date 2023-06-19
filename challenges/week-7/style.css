@@ -1,0 +1,27 @@
+:root{
+    --primary-color: #000;
+    --background-color: #fff;
+}
+
+.dark{
+    --primary-color: #fff;
+    --background-color: #000;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-column{
+    flex: auto;
+}
+
+.dark-mode-toggle{
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
