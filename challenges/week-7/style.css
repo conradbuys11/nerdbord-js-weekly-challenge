@@ -13,12 +13,13 @@
 }
 
 body{
+    margin: 2rem;
     color: var(--primary-color);
     background-color: var(--background-color);
 }
 
 .has-transition{
-    transition-property: color, background-color;
+    transition-property: color, background-color, border-color;
     transition-timing-function: ease-in-out;
     transition-duration: 600ms;
 }
@@ -29,7 +30,17 @@ body{
 }
 
 .header-column{
-    flex: auto;
+    flex: 1;
+}
+
+.header-text-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.header-text{
+    font-size: 20px;
 }
 
 .dark-mode-toggle{
@@ -38,5 +49,23 @@ body{
     width: 20px;
     height: 20px;
     background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.top-left-square{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border-color: var(--primary-color);
+    border-style: solid;
+    transform: rotate(34deg);
+}
+
+.top-left-sphere{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-color: var(--primary-color);
+    border-style: solid;
     border-radius: 50%;
 }
