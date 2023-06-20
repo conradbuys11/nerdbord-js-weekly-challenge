@@ -69,3 +69,14 @@ body{
     border-style: solid;
     border-radius: 50%;
 }
+
+.hero{
+    margin-top: 200px;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.hero-text{
+    margin: 0;
+    line-height: 120%;
+}
