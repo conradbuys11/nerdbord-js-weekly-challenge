@@ -1,0 +1,57 @@
+:root{
+    font-family: sans-serif;
+}
+
+main{
+    padding: 1rem 20%;
+}
+
+h1{
+    font-size: 32px;
+    line-height: 120%;
+    margin: 1rem 0;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.question{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow{
+    position: relative;
+}
+
+.arrow-segment{
+    display: inline-block;
+    position: absolute;
+    border: solid #000;
+
+}
+
+.arrow-segment:first-child{
+    /* width: 11px; */
+    transform: rotate(-45deg);
+    left: 7px;
+    top: -2px;
+    border-width: 0 2px 2px 0;
+    padding: 2px;
+}
+
+.arrow-segment:nth-child(2){
+    width: 10px;
+    padding: 0;
+    border-width: 1.33px;
+}
+
+/* .arrow-segment:nth-child(3){
+    width: 11px;
+    transform: rotate(-45deg);
+    top: 5px;
+    left: 11px;
+} */
