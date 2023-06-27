@@ -1,5 +1,6 @@
 :root{
     font-family: sans-serif;
+    --var-black: #000;
 }
 
 main{
@@ -21,44 +22,21 @@ h2{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border: solid var(--var-black);
+    padding-bottom: 8px;
+    border-width: 0 0 1px 0;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
-.arrow-test{
-    width: 15px;
-    height: 15px;
-    background-color: #000;
-    clip-path: polygon(0% 40%, 60% 40%, 25% 0, 50% 0, 100% 50%, 50% 100%, 25% 100%, 60% 60%, 0 60%);
+.question-text{
+    font-size: 18px;
+    line-height: 140%;
 }
 
 .arrow{
-    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: var(--var-black);
+    clip-path: polygon(0% 40%, 60% 40%, 25% 0, 50% 0, 100% 50%, 50% 100%, 25% 100%, 60% 60%, 0 60%);
 }
-
-.arrow-segment{
-    display: inline-block;
-    position: absolute;
-    border: solid #000;
-
-}
-
-.arrow-segment:first-child{
-    /* width: 11px; */
-    transform: rotate(-45deg);
-    left: 7px;
-    top: -2px;
-    border-width: 0 2px 2px 0;
-    padding: 2px;
-}
-
-.arrow-segment:nth-child(2){
-    width: 10px;
-    padding: 0;
-    border-width: 1.33px;
-}
-
-/* .arrow-segment:nth-child(3){
-    width: 11px;
-    transform: rotate(-45deg);
-    top: 5px;
-    left: 11px;
-} */
