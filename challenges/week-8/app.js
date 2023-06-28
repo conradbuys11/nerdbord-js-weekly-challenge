@@ -60,7 +60,9 @@ const makeQuestions = (arrOfQuestions) => {
         <span class="question-text">I have one. What's up?</span>
         <i class="arrow"></i>
       </div>
-      <div class="question-answer">text from virtual insanity here</div>
+      <div class="question-answer">
+        <span class="question-answer-text">text from virtual insanity here</span>
+      </div>
     </div>
     */
 
@@ -83,8 +85,12 @@ const makeQuestions = (arrOfQuestions) => {
 
     let questionAnswer = document.createElement("div");
     questionAnswer.classList.add("question-answer");
-    questionAnswer.innerText = arrOfQuestions[i][1];
     questionAndAnswer.appendChild(questionAnswer);
+
+    let questionAnswerText = document.createElement("span");
+    questionAnswerText.classList.add("question-answer-text");
+    questionAnswerText.innerText = arrOfQuestions[i][1];
+    questionAnswer.appendChild(questionAnswerText);
 
     questionContainer.appendChild(questionAndAnswer);
     questionElementArray.push(questionAndAnswer);
