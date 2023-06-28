@@ -48,22 +48,30 @@ h2{
 }
 
 .active .arrow{
-    clip-path: polygon(40% 0, 40% 60%, 0 25%, 0 50%, 50% 100%, 100% 50%, 100% 25%, 60% 60%, 60% 0);
+    clip-path: polygon(60% 0, 60% 60%, 100% 25%, 100% 50%, 50% 100%, 0 50%, 0 25%, 40% 60%, 40% 0);
 }
 
 .question-answer{
     font-size: 18px;
     line-height: 140%;
-    margin: 24px 20% 32px 0;
-    transition-property: display;
+    margin-right: 20%;
+    transition-property: all;
     transition-timing-function: ease-in-out;
     transition-duration: 500ms;
 }
 
 .inactive .question-answer{
-    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .active .question-answer{
-    display: block;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
 }

@@ -1,4 +1,4 @@
-let questionTextArray = [
+const questionTextArray = [
   [
     "I have one. What's up?",
     "And it's a wonder men can eat at all, when things are big that should be small. Who can tell, what magic spells, we'll be doing for us?",
@@ -30,7 +30,6 @@ let questionElementArray = [];
 
 const toggleActiveInactive = (e) => {
   let clickedElement = e.target;
-  console.log(clickedElement);
 
   // need to get the question-and-answer node, instead of either question, question-text, or arrow node
   if (clickedElement.classList.contains("question")) {
@@ -42,20 +41,19 @@ const toggleActiveInactive = (e) => {
     clickedElement = clickedElement.parentNode.parentNode;
   }
 
-  for (let i = 0; i <= questionElementArray.length; i++) {
-    // did we click this element in array? if so, toggle inactive & active. if not, turn the element inactive if it's currently inactive
+  for (let i = 0; i < questionElementArray.length; i++) {
+    // did we click this element in array? if so, toggle inactive & active. if not, turn the element inactive if it's currently active
     if (questionElementArray[i] === clickedElement) {
-      console.log(`question ${i + 1} is a match!`);
-      // clickedElement.classList.toggle("inactive");
-      // clickedElement.classList.toggle("active");
+      clickedElement.classList.toggle("inactive");
+      clickedElement.classList.toggle("active");
     } else {
-      console.log(`question ${i + 1} is not a match :(`);
+      questionElementArray[i].classList.replace("active", "inactive");
     }
   }
 };
 
 const makeQuestions = (arrOfQuestions) => {
-  for (let i = 0; i <= arrOfQuestions.length; i++) {
+  for (let i = 0; i < arrOfQuestions.length; i++) {
     /* the hierarchy should look something like this:
     <div class="question-and-answer inactive">
       <div class="question">
@@ -86,11 +84,11 @@ const makeQuestions = (arrOfQuestions) => {
     let questionAnswer = document.createElement("div");
     questionAnswer.classList.add("question-answer");
     questionAnswer.innerText = arrOfQuestions[i][1];
-    question.appendChild(questionAnswer);
+    questionAndAnswer.appendChild(questionAnswer);
 
     questionContainer.appendChild(questionAndAnswer);
     questionElementArray.push(questionAndAnswer);
   }
 };
 
-// makeQuestions(questionTextArray);
+makeQuestions(questionTextArray);
