@@ -1,0 +1,96 @@
+:root{
+    font-family: sans-serif;
+    --var-black: #000;
+}
+
+header{
+    font-family: serif;
+    padding-left: 1rem;
+}
+
+main{
+    padding: 0 20%;
+}
+
+.faq-intro{
+    padding-bottom: 2rem;
+}
+
+h1, h2{
+    font-size: 32px;
+    line-height: 120%;
+}
+
+h1, h2, h3{
+    margin: 1rem 0;
+}
+
+h1{
+    font-family: serif;
+    font-size: 40px;
+}
+
+
+h3{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.question{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: solid var(--var-black);
+    padding-bottom: 8px;
+    border-width: 0 0 1px 0;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.question-text{
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.arrow{
+    width: 15px;
+    height: 15px;
+    background-color: var(--var-black);
+    transition-property: clip-path;
+    transition-timing-function: ease-in-out;
+    transition-duration: 500ms;
+}
+
+.inactive .arrow{
+    clip-path: polygon(0% 40%, 60% 40%, 25% 0, 50% 0, 100% 50%, 50% 100%, 25% 100%, 60% 60%, 0 60%);
+}
+
+.active .arrow{
+    clip-path: polygon(60% 0, 60% 60%, 100% 25%, 100% 50%, 50% 100%, 0 50%, 0 25%, 40% 60%, 40% 0);
+}
+
+.question-answer{
+    transition-property: max-height, opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 500ms;
+    overflow: hidden;
+}
+
+.inactive .question-answer{
+    max-height: 0;
+    opacity: 0;
+}
+
+.active .question-answer{
+    max-height: 250px;
+    opacity: 1;
+}
+
+.question-answer-text{
+    margin: 16px 20% 32px 0;
+    font-size: 18px;
+    line-height: 140%;
+    display: block;
+}
