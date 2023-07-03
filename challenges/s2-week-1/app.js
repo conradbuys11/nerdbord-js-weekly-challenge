@@ -12,4 +12,4 @@ const rotateMinHand = (rotateAmount) => {
 };
 
 console.log(clock);
-// document.addEventListener("keypress", (e) => rotateMinHand(10));
+document.addEventListener("keypress", (e) => rotateMinHand(10));
