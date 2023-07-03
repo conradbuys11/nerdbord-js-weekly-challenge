@@ -1,0 +1,37 @@
+.clock-outer-circle{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+.clock-center-dot{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: red;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+
+.clock-hand{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 2px solid red;
+}
+
+.hour-hand{
+    height: 50px;
+    width: 4px;
+    margin-left: -4px;
+}
+
+.minute-hand{
+    height: 100px;
+    width: 4px;
+    margin-left: -4px;
+    transform: rotate(35deg);
+}
