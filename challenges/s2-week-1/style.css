@@ -22,21 +22,31 @@
 .clock-hand{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 24%;
+    width: 4px;
+    margin-left: -4px;
+    transform-origin: bottom;
     border: 2px solid red;
 }
 
 .hour-hand{
+    z-index: 1;
+    top: 36.5%;
     height: 50px;
-    width: 4px;
-    margin-left: -4px;
+    transform: rotate(180deg);
 }
 
 .minute-hand{
     height: 100px;
-    width: 4px;
-    margin-left: -4px;
-    transform: rotate(0deg);
+    transform: rotate(180deg);
+    border-color: blue;
+}
+
+.second-hand{
+    height: 75px;
+    width: 2px;
+    margin-left: 2px;
+    border: 1px solid purple;
 }
 
 .test-hand{
@@ -46,5 +56,5 @@
     /* margin-top: -52px; */
     margin-left: -4px;
     transform-origin: bottom;
-    transform: rotate(38deg);
+    transform: rotate(0deg);
 }
