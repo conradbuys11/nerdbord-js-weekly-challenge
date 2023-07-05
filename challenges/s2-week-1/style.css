@@ -1,3 +1,7 @@
+main{
+    transform: scale(1.5,1.5);
+}
+
 .clock-outer-circle{
     display: flex;
     align-items: center;
@@ -7,10 +11,12 @@
     width: 400px;
     border: 2px solid red;
     border-radius: 50%;
+    margin: 25vh auto 0 auto;
 }
 
 .clock-center-dot{
     position: absolute;
+    z-index: 3;
     left: 50%;
     top: 50%;
     background-color: black;
@@ -22,7 +28,6 @@
 .clock-hand{
     position: absolute;
     left: 50%;
-    top: 24%;
     width: 4px;
     margin-left: -4px;
     transform-origin: bottom;
@@ -31,21 +36,20 @@
 
 .hour-hand{
     z-index: 1;
-    top: 36.5%;
-    height: 50px;
-    transform: rotate(180deg);
+    top: 24%;
+    height: 100px;
 }
 
 .minute-hand{
-    height: 100px;
-    transform: rotate(180deg);
+    top: 1.5%;
+    height: 190px;
     border-color: blue;
 }
 
 .second-hand{
-    height: 75px;
-    top: 31%;
-    transform: rotate(0deg);
+    z-index: 2;
+    height: 120px;
+    top: 19.5%;
     width: 2px;
     margin-left: -2px;
     border: 1px solid purple;
