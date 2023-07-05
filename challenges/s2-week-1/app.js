@@ -25,7 +25,7 @@ const rotateHourHand = (curHours, curMinutes) => {
   console.log(
     `rotating hour hand: ${curHours}:${curMinutes} is a rotation of ${rotateAmount} degrees`
   );
-  // rotateHand(rotateAmount, hourHand);
+  rotateHand(rotateAmount, hourHand);
 };
 
 const rotateMinHand = (curMinutes, curSeconds) => {
@@ -33,7 +33,7 @@ const rotateMinHand = (curMinutes, curSeconds) => {
   console.log(
     `rotating minute hand: x:${curMinutes}:${curSeconds} is a rotation of ${rotateAmount} degrees`
   );
-  // rotateHand(rotateAmount, minHand);
+  rotateHand(rotateAmount, minHand);
 };
 
 const rotateSecHand = (curSeconds) => {
@@ -41,11 +41,8 @@ const rotateSecHand = (curSeconds) => {
   console.log(
     `rotating second hand: x:x:${curSeconds} is a rotation of ${rotateAmount} degrees`
   );
-  // rotateHand(rotateAmount, secondHand);
+  rotateHand(rotateAmount, secondHand);
 };
 
-console.log(clock);
-// document.addEventListener("keypress", (e) => rotateMinHand(10));
-
-console.log(_date.getSeconds());
 parseCurrentTime();
+setInterval(parseCurrentTime, 1000);

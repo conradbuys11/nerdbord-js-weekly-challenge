@@ -13,7 +13,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    background-color: red;
+    background-color: black;
     width: 8px;
     height: 8px;
     margin: -4px 0 0 -4px;
@@ -44,8 +44,10 @@
 
 .second-hand{
     height: 75px;
+    top: 31%;
+    transform: rotate(0deg);
     width: 2px;
-    margin-left: 2px;
+    margin-left: -2px;
     border: 1px solid purple;
 }
 
