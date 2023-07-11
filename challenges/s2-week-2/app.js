@@ -1,18 +1,35 @@
 "use strict";
 const mainBox = document.querySelector("div.main-box");
-// const createAllTextBoxes = (arrOfTextBoxes) => {};
-const createTextBox = (num, text, picture, location) => {
+const createAllTextBoxes = (arrOfTextBoxes) => {
+    arrOfTextBoxes.forEach((textBoxObj) => {
+        createTextBox(textBoxObj);
+    });
+};
+const createTextBox = (textBoxObj) => {
     let textBox = document.createElement("div");
     textBox.classList.add("text-box");
     let textNum = document.createElement("span");
     textNum.classList.add("text", "text-number");
-    textNum.innerText = num.toString();
+    textNum.innerText = textBoxObj.num.toString();
     textBox.appendChild(textNum);
     let textMain = document.createElement("span");
     textMain.classList.add("text", "text-main");
-    textMain.innerText = text.toUpperCase();
+    textMain.innerText = textBoxObj.text.toUpperCase();
     textBox.appendChild(textMain);
     // TO-DO: add functionality for eventlistener, picture
     mainBox.appendChild(textBox);
 };
-createTextBox("02", "brand identity", null, null);
+const textBoxes = [
+    { num: "01", text: "interiors", picture: "interiors", location: null },
+    {
+        num: "02",
+        text: "brand identity",
+        picture: "brand-identity",
+        location: null,
+    },
+    { num: "03", text: "visual", picture: "visual", location: null },
+    { num: "04", text: "animation", picture: "animation", location: null },
+    { num: "05", text: "bunch", picture: "bunch", location: null },
+    { num: "06", text: "rumors", picture: "rumors", location: null },
+];
+createAllTextBoxes(textBoxes);

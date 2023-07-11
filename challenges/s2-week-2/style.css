@@ -12,7 +12,10 @@ main{
 
 .main-box{
     display: flex;
-    margin: 10rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem 2rem;
+    margin: 20%;
 }
 
 .text-box{
@@ -24,6 +27,7 @@ main{
     color: var(--color-gray);
     transition-property: color;
     transition-duration: 500ms;
+    cursor: default;
 }
 
 .text-number{

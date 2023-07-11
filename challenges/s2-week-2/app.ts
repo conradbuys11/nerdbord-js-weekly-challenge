@@ -3,7 +3,7 @@ const mainBox = document.querySelector("div.main-box")!;
 type TextBoxObject = {
   num: number | string;
   text: string;
-  picture: any;
+  picture: string;
   location: any;
 };
 
@@ -32,14 +32,18 @@ const createTextBox = (textBoxObj: TextBoxObject) => {
   mainBox.appendChild(textBox);
 };
 
-// TO-DO: populate rest of array
-const textBoxes = [
+const textBoxes: TextBoxObject[] = [
   { num: "01", text: "interiors", picture: "interiors", location: null },
+  {
+    num: "02",
+    text: "brand identity",
+    picture: "brand-identity",
+    location: null,
+  },
+  { num: "03", text: "visual", picture: "visual", location: null },
+  { num: "04", text: "animation", picture: "animation", location: null },
+  { num: "05", text: "bunch", picture: "bunch", location: null },
+  { num: "06", text: "rumors", picture: "rumors", location: null },
 ];
 
-createTextBox({
-  num: "02",
-  text: "brand identity",
-  picture: null,
-  location: null,
-});
+createAllTextBoxes(textBoxes);
