@@ -1,0 +1,40 @@
+:root{
+    --color-gray: #c6c6c6;
+    --color-black: #1d1d1d;
+}
+
+main{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.main-box{
+    display: flex;
+    margin: 10rem;
+}
+
+.text-box{
+    display: flex;
+    align-items: flex-start;
+}
+
+.text{
+    color: var(--color-gray);
+    transition-property: color;
+    transition-duration: 500ms;
+}
+
+.text-number{
+    margin-right: 4px;
+}
+
+.text-main{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.active{
+    color: var(--color-black);
+}
