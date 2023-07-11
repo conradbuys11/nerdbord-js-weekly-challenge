@@ -3,6 +3,8 @@
     "version": "1.0.0",
     "description": "Building hover effects",
     "author": "Nerdbord",
-    "license": "ISC"
-  }
-  
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.1.6"
+    }
+}
