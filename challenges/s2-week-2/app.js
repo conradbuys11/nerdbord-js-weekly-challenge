@@ -1,5 +1,6 @@
 "use strict";
 const mainBox = document.querySelector("div.main-box");
+const photoBox = document.querySelector("div.photo-box");
 const createAllTextBoxes = (arrOfTextBoxes) => {
     arrOfTextBoxes.forEach((textBoxObj) => {
         createTextBox(textBoxObj);
@@ -17,10 +18,38 @@ const createTextBox = (textBoxObj) => {
     textMain.innerText = textBoxObj.text.toUpperCase();
     textBox.appendChild(textMain);
     // TO-DO: add functionality for eventlistener, picture
+    let photo = document.createElement("div");
+    photo.classList.add("photo");
+    photo.style.backgroundImage = `url(./img/${textBoxObj.picture}.png)`;
+    if (textBoxObj.location) {
+        photo.style.left = textBoxObj.location.x;
+        photo.style.top = textBoxObj.location.y;
+    }
+    photoBox.appendChild(photo);
+    textBox.addEventListener("mouseover", (e) => {
+        !textBox.classList.contains("active")
+            ? textBox.classList.add("active")
+            : null;
+        !photo.classList.contains("active") ? photo.classList.add("active") : null;
+        console.log(photo.style.height);
+    });
+    textBox.addEventListener("mouseout", (e) => {
+        textBox.classList.contains("active")
+            ? textBox.classList.remove("active")
+            : null;
+        photo.classList.contains("active")
+            ? photo.classList.remove("active")
+            : null;
+    });
     mainBox.appendChild(textBox);
 };
 const textBoxes = [
-    { num: "01", text: "interiors", picture: "interiors", location: null },
+    {
+        num: "01",
+        text: "interiors",
+        picture: "interiors",
+        location: { x: "70%", y: "30%" },
+    },
     {
         num: "02",
         text: "brand identity",

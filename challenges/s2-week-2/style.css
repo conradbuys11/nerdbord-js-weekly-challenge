@@ -10,6 +10,24 @@ main{
     letter-spacing: 3px;
 }
 
+.photo-box{
+    position: relative;
+}
+
+.photo{
+    position: absolute;
+    overflow: hidden;
+    transition-property: max-height, opacity;
+    transition-duration: 500ms;
+    /* max-height: 0; */
+    opacity: 0;
+}
+
+.photo.active{
+    /* max-height: 1000px; */
+    opacity: 1;
+}
+
 .main-box{
     display: flex;
     justify-content: center;
@@ -30,6 +48,10 @@ main{
     cursor: default;
 }
 
+.active .text{
+    color: var(--color-black);
+}
+
 .text-number{
     margin-right: 4px;
 }
@@ -37,8 +59,4 @@ main{
 .text-main{
     font-weight: 600;
     font-size: 30px;
-}
-
-.active{
-    color: var(--color-black);
 }
