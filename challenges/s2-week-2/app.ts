@@ -1,12 +1,12 @@
 const mainBox = document.querySelector("div.main-box")!;
 
-const createAllTextBoxes = (arrOfTextBoxes) => {};
+// const createAllTextBoxes = (arrOfTextBoxes) => {};
 
 const createTextBox = (
   num: number | string,
   text: string,
-  picture,
-  location
+  picture: any,
+  location: any
 ) => {
   let textBox = document.createElement("div");
   textBox.classList.add("text-box");
